@@ -25,23 +25,27 @@ int main(void)
     {
         printf("Enter operation (+ - / * ! ^):");  // prints operations list on the screen
         scanf(" %c", &c);    // scan operation
-        if (c == '+')   // 'plus' operation cycle
+        switch(c)  // 'plus' operation cycle
+            {
+        case '+':
             {
                 printf("Enter the first number:");
                 scanf("%f", &a);
                 printf("Enter the second number:");
                 scanf("%f", &b);
                 printf("Result is %.2f (operation %c)\n",a+b,c);
+                break;
             }
-        else if (c == '-')  // 'minus' operation cycle
+        case '-':  // 'minus' operation cycle
             {
                 printf("Enter the first number:");
                 scanf("%f", &a);
                 printf("Enter the second number:");
                 scanf("%f", &b);
                 printf("Result is %.2f (operation %c)\n", a-b,c);
+                break;
             }
-        else if (c == '/')  // 'divide' operation cycle
+        case '/':  // 'divide' operation cycle
             {
                 printf("Enter the first number:");
                 scanf("%f", &a);
@@ -49,16 +53,18 @@ int main(void)
                 scanf("%f", &b);
                 if (b != 0) printf("Result is %.4f (operation %c)\n", a/b,c); // you can divide something only if second number != 0. 'Idiot check'
                 else printf("You can't divide by zero\n");
+                break;
             }
-        else if (c == '*')  // 'multiplication' operation cycle
+        case '*':  // 'multiplication' operation cycle
             {
                 printf("Enter the first number:");
                 scanf("%f", &a);
                 printf("Enter the second number:");
                 scanf("%f", &b);
                 printf("Result is %.2f (operation %c)\n", a*b,c);
+                break;
             }
-        else if (c == '^')  // exponent cycle
+        case '^':  // exponent cycle
             {
                 printf("Enter the number:");
                 scanf("%f", &a);
@@ -67,8 +73,9 @@ int main(void)
                 res = 1;
                     for (int i=0; i<k;i++) res = res*a; // just * number on itself for k times
                 printf("Result is %.2f\n", res);
+                break;
             }
-        else if (c == '!')  // factorial calculating
+        case '!':  // factorial calculating
             {
                 factRes = 1;
                 printf("Enter the number (!only integer!):");
@@ -76,8 +83,9 @@ int main(void)
                 if (k >= 0) for (int i=k; i!=1;i--) factRes = factRes*i;    // calculate factorial from back
                 else printf("This number is below zero. Please, try again.");
                 printf("Result is %i\n", factRes);
+                break;
             }
-        else printf("\nTrouble with operation. Please, use operations from list: (+ - / * ! ^).\n");
+        }
         printf("\nTry again? Type any symbol to continue and 'q' for exit.");
         scanf(" %c", &c);
     } while (c != 'q');    // program working status
