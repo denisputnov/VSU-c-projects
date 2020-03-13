@@ -4,14 +4,14 @@
 
 ### Installation
 
-> Open `cmd` using Win+R keyboard shortcut in Windows; </br>
-> Open `eclipse` directory, later open `workspace` folder;
-> Use command `git clone`:
+> Firstly, open `cmd` using Win+R keyboard shortcut in Windows; </br>
+> Secondly, open `eclipse` directory, later open `workspace` folder;
+> Thirdly, use command `git clone`:
 ```
 git clone https://github.com/grnbows/VSU-c-projects.git
 ```
 
-> Open eclipse and run my project.
+> Then open eclipse and run my project.
 
 ---
 
