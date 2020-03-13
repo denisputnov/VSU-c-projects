@@ -4,7 +4,7 @@
 
 ### Installation
 
-> Open `cmd` using Win+R keyboard shortcut in Windows;
+> Open `cmd` using Win+R keyboard shortcut in Windows; </br>
 > Open `eclipse` directory, later open `workspace` folder;
 > Use command `git clone`:
 ```
