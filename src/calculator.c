@@ -17,13 +17,14 @@ int main(void)
     setvbuf(stderr, NULL, _IONBF, 0);
 
     // variable description
-    float a,b,res;
-    int k,factRes;
+    float a,b,res,*x,*y;
+    int k,factRes,size,i;
     char c;
 
     do
     {
-        printf("Enter operation (+ - / * ! ^):");  // prints operations list on the screen
+        printf("Enter operation (+ - / * ! ^) for numbers and\n");  // prints operations list on the screen
+        printf("enter operation (p, s) [plus, subtraction] for vectors:");
         scanf(" %c", &c);    // scan operation
         switch(c)  // 'plus' operation cycle
             {
@@ -83,6 +84,48 @@ int main(void)
                 if (k >= 0) for (int i=k; i!=1;i--) factRes = factRes*i;    // calculate factorial from back
                 else printf("This number is below zero. Please, try again.");
                 printf("Result is %i\n", factRes);
+                break;
+            }
+        case 'p':
+            {
+                i=0;
+                x=malloc(size*sizeof(int));
+                y=malloc(size*sizeof(int));
+                printf("Enter vector's size: ");
+                scanf(" %i",&size);
+                printf("Enter first vector: ");
+                for(int i=0;i<size;i++)
+                    scanf(" %f",&x[i]);
+                printf("Enter second vector: ");
+                for(int i=0;i<size;i++)
+                    scanf(" %f",&y[i]);
+                printf("Result vectors summ: ");
+                for(int i=0;i<size;i++)
+                    printf("%.2f ",x[i]+y[i]);
+                printf("\n");
+                free(x);
+                free(y);
+                break;
+            }
+         case 's':
+            {
+                i=0;
+                x=malloc(size*sizeof(int));
+                y=malloc(size*sizeof(int));
+                printf("Enter vector's size: ");
+                scanf(" %i",&size);
+                printf("Enter first vector: ");
+                for(int i=0;i<size;i++)
+                    scanf(" %f",&x[i]);
+                printf("Enter second vector: ");
+                for(int i=0;i<size;i++)
+                    scanf(" %f",&y[i]);
+                printf("Result vectors subtraction : ");
+                for(int i=0;i<size;i++)
+                    printf("%.2f ",x[i]-y[i]);
+                printf("\n");
+                free(x);
+                free(y);
                 break;
             }
         }
