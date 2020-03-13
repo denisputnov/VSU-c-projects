@@ -1,6 +1,6 @@
 ### VSU-c-projects
 
-### Here you can see project of vectors calculator on C. 
+##### Here you can see project of vectors calculator on C. 
 
 ### Installation
 
