@@ -16,9 +16,9 @@ git clone https://github.com/grnbows/VSU-c-projects.git
 ---
 
 ### Find me here:
-* https://vk.com/grnbows </br>
-* https://www.instagram.com/grnbows </br>
-* https://twitter.com/grnbows </br>
+* [Вконтакте](https://vk.com/grnbows) </br>
+* [Instagram](https://www.instagram.com/grnbows) </br>
+* [Twitter](https://twitter.com/grnbows) </br>
 
 ### License
 
