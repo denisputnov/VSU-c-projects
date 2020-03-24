@@ -105,6 +105,7 @@ int main(void)
                 printf("\n");
                 free(x);
                 free(y);
+                free(res);
                 break;
             }
          case 's':
@@ -126,6 +127,7 @@ int main(void)
                 printf("\n");
                 free(x);
                 free(y);
+                free(res);
                 break;
             }
         }
