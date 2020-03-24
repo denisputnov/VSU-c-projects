@@ -104,13 +104,13 @@ int main(void)
                                 fscanf(input, " %f",&y[i]);
                             fprintf(output, "( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%f ", x[i]);
+                                fprintf(output, "%.0f ", x[i]);
                             fprintf(output, ") + ( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%f ", y[i]);
+                                fprintf(output, "%.0f ", y[i]);
                             fprintf(output, ") = ( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%.2f ",x[i]+y[i]);
+                                fprintf(output, "%.0f ",x[i]+y[i]);
                             fprintf(output, ")");
                             break;
                         }
@@ -123,13 +123,13 @@ int main(void)
                                 fscanf(input, " %f",&y[i]);
                             fprintf(output, "( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%f ", x[i]);
+                                fprintf(output, "%.0f ", x[i]);
                             fprintf(output, ") + ( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%f ", y[i]);
+                                fprintf(output, "%.0f ", y[i]);
                             fprintf(output, ") = ( ");
                             for(int i=0;i<size;i++)
-                                fprintf(output, "%.2f ",x[i]-y[i]);
+                                fprintf(output, "%.0f ",x[i]-y[i]);
                             fprintf(output, ")");
                             break;
                         }
