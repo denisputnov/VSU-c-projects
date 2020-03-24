@@ -19,18 +19,25 @@ int main(void)
     // variable description
     float a,b,res,*x,*y;
     int k,factRes,size,i;
-    char c,l,v;
+    char c,l,v, inputFileName[254+1], outputFileName[254+1], again;
 
 
         printf("What are you want to use? File or console? [f/c]");
         scanf(" %c", &l);
-        switch(l)  //  choose with what are you want to work, console of file
+        switch(l)  //  choose with what are you want to work, console or file
             {
         case 'f':
             {
+            do
+            {
                 FILE *input, *output;  // define files
-                input = fopen("input.txt","r");  // open all files that we need
-                output = fopen("output.txt", "w");
+                printf("\nNow you can choose names of input and output files.\nIMPORTANT: Indicated files should be located in such directory as executable file.\nSave your relatives and love cats.\n\n");
+                printf("Enter name of input file:");
+                scanf(" %s", inputFileName);
+                printf("Enter name of output file:");
+                scanf(" %s", outputFileName);
+                input = fopen(inputFileName,"r");  // open all files that we need
+                output = fopen(outputFileName, "w");
                 fscanf(input, " %c", &c); // scan operation
                 fscanf(input, " %c", &v); // scan vector or number
                 switch(v)  // choose vector or number
@@ -141,6 +148,9 @@ int main(void)
                 }
                 fclose(input); //  close files
                 fclose(output);
+                printf("\nTry again? Type any symbol to continue and 'q' for exit.");
+                scanf(" %c", &again);
+                }  while (again != 'q');
                 break;
             }
         case 'c':
