@@ -19,7 +19,7 @@ int main(void)
     // variable description
     float a,b,res,*x,*y;
     int k,factRes,size,i;
-    char c,l,v, inputFileName[254+1], outputFileName[254+1], again;
+    char c,l,v, inputFileName[254+1], outputFileName[254+1], again, stroke[254+1];
 
 
         printf("What are you want to use? File or console? [f/c]");
@@ -38,8 +38,11 @@ int main(void)
                 scanf(" %s", outputFileName);
                 input = fopen(inputFileName,"r");  // open all files that we need
                 output = fopen(outputFileName, "w");
-                fscanf(input, " %c", &c); // scan operation
-                fscanf(input, " %c", &v); // scan vector or number
+                while (feof(input) == 0)
+                {
+                    fscanf(input, " %c", &c); // scan operation
+                    fscanf(input, " %c", &v); // scan vector or number
+
                 switch(v)  // choose vector or number
                 {
                 case 's': // if number
@@ -93,6 +96,7 @@ int main(void)
                             break;
                         }
                     }
+                fprintf(output, "\n");
                 break;
                 }
 
@@ -131,7 +135,7 @@ int main(void)
                             fprintf(output, "( ");
                             for(int i=0;i<size;i++)
                                 fprintf(output, "%.0f ", x[i]);
-                            fprintf(output, ") + ( ");
+                            fprintf(output, ") - ( ");
                             for(int i=0;i<size;i++)
                                 fprintf(output, "%.0f ", y[i]);
                             fprintf(output, ") = ( ");
@@ -141,6 +145,8 @@ int main(void)
                             break;
                         }
                     }
+                }
+                fprintf(output, "\n");
                     free(x);  //  make memory free
                     free(y);
                 break;
