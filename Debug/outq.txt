@@ -1,0 +1,8 @@
+Answer is: -4.0000
+Answer is: 1.6667
+Answer is: 5.0000
+Answer is: 2.0000
+Answer is: 24.0000
+Answer is: 0.7500
+Answer is: 1024.0000
+Answer is: 120.0000
